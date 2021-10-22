@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SF-Pro-Rounded-Medium.otf">
+            <string>SFProRounded-Medium</string>
+        </array>
+        <array key="SF-Pro-Rounded-Regular.otf">
+            <string>SFProRounded-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="160" id="gho-DA-NH7" customClass="TicketCell" customModule="Zammad_app" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="160"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="gho-DA-NH7" id="ckD-to-3fy">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="160"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4Hq-7R-v6d">
+                        <rect key="frame" x="10" y="10" width="20" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="4Hq-7R-v6d" secondAttribute="height" multiplier="1:1" id="DiM-GC-2Oj"/>
+                            <constraint firstAttribute="width" constant="20" id="u2d-Bn-Pq0"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="751" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9SW-ik-5bA">
+                        <rect key="frame" x="40" y="10" width="364" height="24"/>
+                        <fontDescription key="fontDescription" name="SFProRounded-Regular" family="SF Pro Rounded" pointSize="20"/>
+                        <color key="textColor" red="0.015686274510000001" green="0.34901960780000002" blue="0.44705882349999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cA9-Za-Kw2">
+                        <rect key="frame" x="40" y="44" width="364" height="42.5"/>
+                        <fontDescription key="fontDescription" name="SFProRounded-Medium" family="SF Pro Rounded" pointSize="16"/>
+                        <color key="textColor" red="0.30980392159999998" green="0.30980392159999998" blue="0.30980392159999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="7K0-UL-EW5">
+                        <rect key="frame" x="40" y="90.5" width="364" height="59.5"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="DJD-xT-9gx">
+                                <rect key="frame" x="0.0" y="0.0" width="172" height="59.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Priority" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HzY-51-F2X">
+                                        <rect key="frame" x="0.0" y="0.0" width="172" height="19.5"/>
+                                        <fontDescription key="fontDescription" name="SFProRounded-Regular" family="SF Pro Rounded" pointSize="16"/>
+                                        <color key="textColor" red="0.30980392156862746" green="0.30980392156862746" blue="0.30980392156862746" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Group" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UkY-o5-7Uh">
+                                        <rect key="frame" x="0.0" y="19.5" width="172" height="20.5"/>
+                                        <fontDescription key="fontDescription" name="SFProRounded-Regular" family="SF Pro Rounded" pointSize="16"/>
+                                        <color key="textColor" red="0.30980392159999998" green="0.30980392159999998" blue="0.30980392159999998" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Owner" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d44-47-TtT">
+                                        <rect key="frame" x="0.0" y="40" width="172" height="19.5"/>
+                                        <fontDescription key="fontDescription" name="SFProRounded-Regular" family="SF Pro Rounded" pointSize="16"/>
+                                        <color key="textColor" red="0.30980392159999998" green="0.30980392159999998" blue="0.30980392159999998" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="XK1-cn-5uB">
+                                <rect key="frame" x="192" y="0.0" width="172" height="59.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Created" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JHc-W5-gwc">
+                                        <rect key="frame" x="0.0" y="0.0" width="172" height="19.5"/>
+                                        <fontDescription key="fontDescription" name="SFProRounded-Regular" family="SF Pro Rounded" pointSize="16"/>
+                                        <color key="textColor" red="0.30980392159999998" green="0.30980392159999998" blue="0.30980392159999998" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t6U-ur-RXC">
+                                        <rect key="frame" x="0.0" y="19.5" width="172" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Changed" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4yb-Of-f58">
+                                        <rect key="frame" x="0.0" y="40" width="172" height="19.5"/>
+                                        <fontDescription key="fontDescription" name="SFProRounded-Regular" family="SF Pro Rounded" pointSize="16"/>
+                                        <color key="textColor" red="0.30980392159999998" green="0.30980392159999998" blue="0.30980392159999998" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="7K0-UL-EW5" firstAttribute="leading" secondItem="9SW-ik-5bA" secondAttribute="leading" id="7oF-dI-05I"/>
+                    <constraint firstAttribute="trailing" secondItem="cA9-Za-Kw2" secondAttribute="trailing" constant="10" id="C2C-oe-s7k"/>
+                    <constraint firstItem="9SW-ik-5bA" firstAttribute="leading" secondItem="4Hq-7R-v6d" secondAttribute="trailing" constant="10" id="FcZ-xX-XWb"/>
+                    <constraint firstItem="9SW-ik-5bA" firstAttribute="top" secondItem="4Hq-7R-v6d" secondAttribute="top" id="M5W-4y-yx9"/>
+                    <constraint firstAttribute="trailing" secondItem="7K0-UL-EW5" secondAttribute="trailing" constant="10" id="Svh-Em-Ftb"/>
+                    <constraint firstAttribute="bottom" secondItem="7K0-UL-EW5" secondAttribute="bottom" constant="10" id="VnB-U1-Nqm"/>
+                    <constraint firstItem="cA9-Za-Kw2" firstAttribute="top" secondItem="9SW-ik-5bA" secondAttribute="bottom" constant="10" id="Wa8-s1-vkh"/>
+                    <constraint firstItem="4Hq-7R-v6d" firstAttribute="top" secondItem="ckD-to-3fy" secondAttribute="top" constant="10" id="eCY-Qa-GXS"/>
+                    <constraint firstItem="4Hq-7R-v6d" firstAttribute="leading" secondItem="ckD-to-3fy" secondAttribute="leading" constant="10" id="f8o-6B-vWh"/>
+                    <constraint firstItem="7K0-UL-EW5" firstAttribute="top" secondItem="cA9-Za-Kw2" secondAttribute="bottom" constant="4" id="h5D-uY-gxT"/>
+                    <constraint firstItem="cA9-Za-Kw2" firstAttribute="leading" secondItem="9SW-ik-5bA" secondAttribute="leading" id="wNs-Cl-8rd"/>
+                    <constraint firstAttribute="trailing" secondItem="9SW-ik-5bA" secondAttribute="trailing" constant="10" id="yrq-kZ-5wc"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="dateChangedLabel" destination="4yb-Of-f58" id="lpT-vh-ahu"/>
+                <outlet property="dateCreatedLabel" destination="JHc-W5-gwc" id="5bK-LP-ZEJ"/>
+                <outlet property="groupLabel" destination="UkY-o5-7Uh" id="FtV-pN-kFb"/>
+                <outlet property="ownerLabel" destination="d44-47-TtT" id="SCa-0s-DFd"/>
+                <outlet property="priorityLabel" destination="HzY-51-F2X" id="bCh-sW-Zuy"/>
+                <outlet property="statusImage" destination="4Hq-7R-v6d" id="hwe-Fs-s6q"/>
+                <outlet property="ticketNumber" destination="cA9-Za-Kw2" id="5gd-u5-XTH"/>
+                <outlet property="ticketTitle" destination="9SW-ik-5bA" id="b6F-dg-GNU"/>
+            </connections>
+            <point key="canvasLocation" x="228.98550724637684" y="96.428571428571431"/>
+        </tableViewCell>
+    </objects>
+</document>

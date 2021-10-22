@@ -13,6 +13,16 @@
 		C25D6BE32720269200045B6D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C25D6BE12720269200045B6D /* Main.storyboard */; };
 		C25D6BE52720269400045B6D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C25D6BE42720269400045B6D /* Assets.xcassets */; };
 		C25D6BE82720269400045B6D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C25D6BE62720269400045B6D /* LaunchScreen.storyboard */; };
+		C2E2D5102722E6D700D0D324 /* SF-Pro-Text-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = C2E2D4BB2722E6BB00D0D324 /* SF-Pro-Text-Medium.otf */; };
+		C2E2D5392722E6D700D0D324 /* SF-Pro-Rounded-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = C2E2D4E42722E6CA00D0D324 /* SF-Pro-Rounded-Medium.otf */; };
+		C2E2D53F2722E6D700D0D324 /* SF-Pro-Rounded-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = C2E2D4EA2722E6CC00D0D324 /* SF-Pro-Rounded-Light.otf */; };
+		C2E2D54C2722E6D700D0D324 /* SF-Pro-Text-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = C2E2D4F72722E6D100D0D324 /* SF-Pro-Text-Regular.otf */; };
+		C2E2D54E2722E6D700D0D324 /* SF-Pro-Rounded-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = C2E2D4F92722E6D200D0D324 /* SF-Pro-Rounded-Regular.otf */; };
+		C2E2D5662723046100D0D324 /* TicketsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E2D5652723046100D0D324 /* TicketsController.swift */; };
+		C2E2D5682723048100D0D324 /* DashboardController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E2D5672723048100D0D324 /* DashboardController.swift */; };
+		C2E2D56B272304A500D0D324 /* TicketCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E2D569272304A500D0D324 /* TicketCell.swift */; };
+		C2E2D56E27233E9000D0D324 /* Ticket.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E2D56D27233E9000D0D324 /* Ticket.swift */; };
+		C2E2D5722723554A00D0D324 /* TicketCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2E2D5712723554A00D0D324 /* TicketCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +34,16 @@
 		C25D6BE42720269400045B6D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C25D6BE72720269400045B6D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C25D6BE92720269400045B6D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C2E2D4BB2722E6BB00D0D324 /* SF-Pro-Text-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Medium.otf"; sourceTree = "<group>"; };
+		C2E2D4E42722E6CA00D0D324 /* SF-Pro-Rounded-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Rounded-Medium.otf"; sourceTree = "<group>"; };
+		C2E2D4EA2722E6CC00D0D324 /* SF-Pro-Rounded-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Rounded-Light.otf"; sourceTree = "<group>"; };
+		C2E2D4F72722E6D100D0D324 /* SF-Pro-Text-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Regular.otf"; sourceTree = "<group>"; };
+		C2E2D4F92722E6D200D0D324 /* SF-Pro-Rounded-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Rounded-Regular.otf"; sourceTree = "<group>"; };
+		C2E2D5652723046100D0D324 /* TicketsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketsController.swift; sourceTree = "<group>"; };
+		C2E2D5672723048100D0D324 /* DashboardController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardController.swift; sourceTree = "<group>"; };
+		C2E2D569272304A500D0D324 /* TicketCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketCell.swift; sourceTree = "<group>"; };
+		C2E2D56D27233E9000D0D324 /* Ticket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ticket.swift; sourceTree = "<group>"; };
+		C2E2D5712723554A00D0D324 /* TicketCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TicketCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +76,65 @@
 		C25D6BDA2720269200045B6D /* Zammad-app */ = {
 			isa = PBXGroup;
 			children = (
+				C2E2D55A272301B200D0D324 /* Controller */,
+				C2E2D55D272301D600D0D324 /* XiB */,
+				C2E2D55C272301C200D0D324 /* Extension */,
+				C2E2D55B272301BA00D0D324 /* Model */,
+				C2E2D4AF2722E64800D0D324 /* Fonts */,
 				C25D6BDB2720269200045B6D /* AppDelegate.swift */,
 				C25D6BDD2720269200045B6D /* SceneDelegate.swift */,
-				C25D6BDF2720269200045B6D /* ViewController.swift */,
 				C25D6BE12720269200045B6D /* Main.storyboard */,
 				C25D6BE42720269400045B6D /* Assets.xcassets */,
 				C25D6BE62720269400045B6D /* LaunchScreen.storyboard */,
 				C25D6BE92720269400045B6D /* Info.plist */,
 			);
 			path = "Zammad-app";
+			sourceTree = "<group>";
+		};
+		C2E2D4AF2722E64800D0D324 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				C2E2D4EA2722E6CC00D0D324 /* SF-Pro-Rounded-Light.otf */,
+				C2E2D4E42722E6CA00D0D324 /* SF-Pro-Rounded-Medium.otf */,
+				C2E2D4F92722E6D200D0D324 /* SF-Pro-Rounded-Regular.otf */,
+				C2E2D4BB2722E6BB00D0D324 /* SF-Pro-Text-Medium.otf */,
+				C2E2D4F72722E6D100D0D324 /* SF-Pro-Text-Regular.otf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		C2E2D55A272301B200D0D324 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				C2E2D5652723046100D0D324 /* TicketsController.swift */,
+				C25D6BDF2720269200045B6D /* ViewController.swift */,
+				C2E2D5672723048100D0D324 /* DashboardController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		C2E2D55B272301BA00D0D324 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C2E2D56D27233E9000D0D324 /* Ticket.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C2E2D55C272301C200D0D324 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		C2E2D55D272301D600D0D324 /* XiB */ = {
+			isa = PBXGroup;
+			children = (
+				C2E2D569272304A500D0D324 /* TicketCell.swift */,
+				C2E2D5712723554A00D0D324 /* TicketCell.xib */,
+			);
+			path = XiB;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,7 +196,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				C25D6BE82720269400045B6D /* LaunchScreen.storyboard in Resources */,
+				C2E2D5102722E6D700D0D324 /* SF-Pro-Text-Medium.otf in Resources */,
 				C25D6BE52720269400045B6D /* Assets.xcassets in Resources */,
+				C2E2D54E2722E6D700D0D324 /* SF-Pro-Rounded-Regular.otf in Resources */,
+				C2E2D5722723554A00D0D324 /* TicketCell.xib in Resources */,
+				C2E2D53F2722E6D700D0D324 /* SF-Pro-Rounded-Light.otf in Resources */,
+				C2E2D5392722E6D700D0D324 /* SF-Pro-Rounded-Medium.otf in Resources */,
+				C2E2D54C2722E6D700D0D324 /* SF-Pro-Text-Regular.otf in Resources */,
 				C25D6BE32720269200045B6D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -139,7 +215,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				C25D6BE02720269200045B6D /* ViewController.swift in Sources */,
+				C2E2D5662723046100D0D324 /* TicketsController.swift in Sources */,
+				C2E2D5682723048100D0D324 /* DashboardController.swift in Sources */,
+				C2E2D56B272304A500D0D324 /* TicketCell.swift in Sources */,
 				C25D6BDC2720269200045B6D /* AppDelegate.swift in Sources */,
+				C2E2D56E27233E9000D0D324 /* Ticket.swift in Sources */,
 				C25D6BDE2720269200045B6D /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
