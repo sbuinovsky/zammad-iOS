@@ -100,19 +100,45 @@
                                 <color key="textColor" red="0.015686274510000001" green="0.34901960780000002" blue="0.44705882349999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="K2C-q5-NkM">
+                                <rect key="frame" x="0.0" y="100" width="414" height="713"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="1xL-xV-9jS"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="K2C-q5-NkM" firstAttribute="top" secondItem="ai7-6D-d2I" secondAttribute="bottom" constant="20" id="UwK-AL-kne"/>
+                            <constraint firstItem="1xL-xV-9jS" firstAttribute="bottom" secondItem="K2C-q5-NkM" secondAttribute="bottom" id="eNl-kW-h8m"/>
+                            <constraint firstItem="1xL-xV-9jS" firstAttribute="trailing" secondItem="K2C-q5-NkM" secondAttribute="trailing" id="ohn-Rk-OIm"/>
                             <constraint firstItem="ai7-6D-d2I" firstAttribute="top" secondItem="1xL-xV-9jS" secondAttribute="top" id="q1X-sJ-Kep"/>
+                            <constraint firstItem="K2C-q5-NkM" firstAttribute="leading" secondItem="1xL-xV-9jS" secondAttribute="leading" id="qeJ-sF-Czk"/>
                             <constraint firstItem="ai7-6D-d2I" firstAttribute="leading" secondItem="1xL-xV-9jS" secondAttribute="leading" constant="20" id="zoA-E4-3Th"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Dashboard" image="Dashboard icon" id="HJb-81-LL3"/>
+                    <connections>
+                        <outlet property="tableView" destination="K2C-q5-NkM" id="kKx-iF-zge"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0FE-qq-04t" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1848" y="473"/>
+        </scene>
+        <!--Ticket options-->
+        <scene sceneID="jfo-HH-j87">
+            <objects>
+                <viewController title="Ticket options" id="bF2-XJ-riY" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="HvH-bE-mNP">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Kcl-G5-wAj"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QYK-GW-rwE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1848" y="-865"/>
         </scene>
         <!--Tickets-->
         <scene sceneID="x2y-Dc-0KT">
@@ -132,15 +158,24 @@
                                 <rect key="frame" x="0.0" y="100" width="414" height="713"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="options-icon" translatesAutoresizingMaskIntoConstraints="NO" id="jHr-ro-1b3">
+                                <rect key="frame" x="358" y="44" width="36" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="jHr-ro-1b3" secondAttribute="height" multiplier="1:1" id="ox7-5p-muO"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="aN2-JQ-wIF"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="jHr-ro-1b3" firstAttribute="centerY" secondItem="w6l-Rv-GBD" secondAttribute="centerY" id="6zo-Fj-Cgt"/>
+                            <constraint firstItem="aN2-JQ-wIF" firstAttribute="trailing" secondItem="jHr-ro-1b3" secondAttribute="trailing" constant="20" id="MvT-z0-zKO"/>
                             <constraint firstItem="w6l-Rv-GBD" firstAttribute="leading" secondItem="aN2-JQ-wIF" secondAttribute="leading" constant="20" id="RDa-bg-b6b"/>
                             <constraint firstItem="aN2-JQ-wIF" firstAttribute="trailing" secondItem="6gA-mW-7GA" secondAttribute="trailing" id="YLz-xI-Ejh"/>
                             <constraint firstItem="w6l-Rv-GBD" firstAttribute="top" secondItem="aN2-JQ-wIF" secondAttribute="top" id="Zpg-ye-lBp"/>
                             <constraint firstItem="aN2-JQ-wIF" firstAttribute="bottom" secondItem="6gA-mW-7GA" secondAttribute="bottom" id="ac9-4o-vJK"/>
                             <constraint firstItem="6gA-mW-7GA" firstAttribute="leading" secondItem="aN2-JQ-wIF" secondAttribute="leading" id="cL8-ae-WFg"/>
+                            <constraint firstItem="jHr-ro-1b3" firstAttribute="height" secondItem="w6l-Rv-GBD" secondAttribute="height" id="vI5-pK-uQU"/>
                             <constraint firstItem="6gA-mW-7GA" firstAttribute="top" secondItem="w6l-Rv-GBD" secondAttribute="bottom" constant="20" id="wre-ZA-L1O"/>
                         </constraints>
                     </view>
@@ -178,6 +213,7 @@
         <image name="Dashboard icon" width="42" height="28"/>
         <image name="Ticket icon" width="42" height="46"/>
         <image name="Zammad-logo" width="266" height="243"/>
+        <image name="options-icon" width="28" height="29"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

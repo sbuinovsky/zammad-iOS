@@ -13,6 +13,15 @@
 		C25D6BE32720269200045B6D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C25D6BE12720269200045B6D /* Main.storyboard */; };
 		C25D6BE52720269400045B6D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C25D6BE42720269400045B6D /* Assets.xcassets */; };
 		C25D6BE82720269400045B6D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C25D6BE62720269400045B6D /* LaunchScreen.storyboard */; };
+		C2D83A822725560C0097D512 /* DashboardItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D83A812725560C0097D512 /* DashboardItem.swift */; };
+		C2D83A85272556980097D512 /* Priority.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D83A84272556980097D512 /* Priority.swift */; };
+		C2D83A87272556EF0097D512 /* DashboardIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D83A86272556EF0097D512 /* DashboardIcon.swift */; };
+		C2D83A8B272558640097D512 /* PriorityIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D83A8A272558640097D512 /* PriorityIcon.swift */; };
+		C2D83A8D272559680097D512 /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D83A8C272559680097D512 /* Status.swift */; };
+		C2D83A8F27257FC30097D512 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D83A8E27257FC30097D512 /* User.swift */; };
+		C2D83A91272583290097D512 /* TestData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D83A90272583290097D512 /* TestData.swift */; };
+		C2D83A93272699B40097D512 /* DashboardCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2D83A92272699B40097D512 /* DashboardCell.xib */; };
+		C2D83A95272699C70097D512 /* DashboardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D83A94272699C70097D512 /* DashboardCell.swift */; };
 		C2E2D5102722E6D700D0D324 /* SF-Pro-Text-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = C2E2D4BB2722E6BB00D0D324 /* SF-Pro-Text-Medium.otf */; };
 		C2E2D5392722E6D700D0D324 /* SF-Pro-Rounded-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = C2E2D4E42722E6CA00D0D324 /* SF-Pro-Rounded-Medium.otf */; };
 		C2E2D53F2722E6D700D0D324 /* SF-Pro-Rounded-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = C2E2D4EA2722E6CC00D0D324 /* SF-Pro-Rounded-Light.otf */; };
@@ -34,6 +43,15 @@
 		C25D6BE42720269400045B6D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C25D6BE72720269400045B6D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C25D6BE92720269400045B6D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C2D83A812725560C0097D512 /* DashboardItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardItem.swift; sourceTree = "<group>"; };
+		C2D83A84272556980097D512 /* Priority.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Priority.swift; sourceTree = "<group>"; };
+		C2D83A86272556EF0097D512 /* DashboardIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardIcon.swift; sourceTree = "<group>"; };
+		C2D83A8A272558640097D512 /* PriorityIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriorityIcon.swift; sourceTree = "<group>"; };
+		C2D83A8C272559680097D512 /* Status.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Status.swift; sourceTree = "<group>"; };
+		C2D83A8E27257FC30097D512 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		C2D83A90272583290097D512 /* TestData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestData.swift; sourceTree = "<group>"; };
+		C2D83A92272699B40097D512 /* DashboardCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DashboardCell.xib; sourceTree = "<group>"; };
+		C2D83A94272699C70097D512 /* DashboardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardCell.swift; sourceTree = "<group>"; };
 		C2E2D4BB2722E6BB00D0D324 /* SF-Pro-Text-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Medium.otf"; sourceTree = "<group>"; };
 		C2E2D4E42722E6CA00D0D324 /* SF-Pro-Rounded-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Rounded-Medium.otf"; sourceTree = "<group>"; };
 		C2E2D4EA2722E6CC00D0D324 /* SF-Pro-Rounded-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Rounded-Light.otf"; sourceTree = "<group>"; };
@@ -76,6 +94,8 @@
 		C25D6BDA2720269200045B6D /* Zammad-app */ = {
 			isa = PBXGroup;
 			children = (
+				C2D83A90272583290097D512 /* TestData.swift */,
+				C2D83A83272556870097D512 /* Enum */,
 				C2E2D55A272301B200D0D324 /* Controller */,
 				C2E2D55D272301D600D0D324 /* XiB */,
 				C2E2D55C272301C200D0D324 /* Extension */,
@@ -89,6 +109,17 @@
 				C25D6BE92720269400045B6D /* Info.plist */,
 			);
 			path = "Zammad-app";
+			sourceTree = "<group>";
+		};
+		C2D83A83272556870097D512 /* Enum */ = {
+			isa = PBXGroup;
+			children = (
+				C2D83A84272556980097D512 /* Priority.swift */,
+				C2D83A8A272558640097D512 /* PriorityIcon.swift */,
+				C2D83A8C272559680097D512 /* Status.swift */,
+				C2D83A86272556EF0097D512 /* DashboardIcon.swift */,
+			);
+			path = Enum;
 			sourceTree = "<group>";
 		};
 		C2E2D4AF2722E64800D0D324 /* Fonts */ = {
@@ -116,7 +147,9 @@
 		C2E2D55B272301BA00D0D324 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				C2D83A8E27257FC30097D512 /* User.swift */,
 				C2E2D56D27233E9000D0D324 /* Ticket.swift */,
+				C2D83A812725560C0097D512 /* DashboardItem.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -133,6 +166,8 @@
 			children = (
 				C2E2D569272304A500D0D324 /* TicketCell.swift */,
 				C2E2D5712723554A00D0D324 /* TicketCell.xib */,
+				C2D83A94272699C70097D512 /* DashboardCell.swift */,
+				C2D83A92272699B40097D512 /* DashboardCell.xib */,
 			);
 			path = XiB;
 			sourceTree = "<group>";
@@ -195,6 +230,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C2D83A93272699B40097D512 /* DashboardCell.xib in Resources */,
 				C25D6BE82720269400045B6D /* LaunchScreen.storyboard in Resources */,
 				C2E2D5102722E6D700D0D324 /* SF-Pro-Text-Medium.otf in Resources */,
 				C25D6BE52720269400045B6D /* Assets.xcassets in Resources */,
@@ -214,13 +250,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C2D83A8F27257FC30097D512 /* User.swift in Sources */,
 				C25D6BE02720269200045B6D /* ViewController.swift in Sources */,
 				C2E2D5662723046100D0D324 /* TicketsController.swift in Sources */,
 				C2E2D5682723048100D0D324 /* DashboardController.swift in Sources */,
+				C2D83A87272556EF0097D512 /* DashboardIcon.swift in Sources */,
+				C2D83A91272583290097D512 /* TestData.swift in Sources */,
+				C2D83A822725560C0097D512 /* DashboardItem.swift in Sources */,
 				C2E2D56B272304A500D0D324 /* TicketCell.swift in Sources */,
 				C25D6BDC2720269200045B6D /* AppDelegate.swift in Sources */,
 				C2E2D56E27233E9000D0D324 /* Ticket.swift in Sources */,
+				C2D83A95272699C70097D512 /* DashboardCell.swift in Sources */,
 				C25D6BDE2720269200045B6D /* SceneDelegate.swift in Sources */,
+				C2D83A85272556980097D512 /* Priority.swift in Sources */,
+				C2D83A8B272558640097D512 /* PriorityIcon.swift in Sources */,
+				C2D83A8D272559680097D512 /* Status.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
