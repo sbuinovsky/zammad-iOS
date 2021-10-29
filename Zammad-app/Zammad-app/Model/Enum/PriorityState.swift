@@ -1,13 +1,13 @@
 //
-//  Priority.swift
+//  PriorityState.swift
 //  Zammad-app
 //
-//  Created by Станислав Буйновский on 24.10.2021.
+//  Created by Станислав Буйновский on 27.10.2021.
 //
 
 import Foundation
 
-enum Priority: String {
+enum PriorityState: String {
     case none = "None"
     case low = "Low"
     case medium = "Medium"

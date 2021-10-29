@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C23C28052729752A00E11F6B /* Priority.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23C28042729752A00E11F6B /* Priority.swift */; };
+		C23C280A2729893900E11F6B /* PriorityState.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23C28092729893900E11F6B /* PriorityState.swift */; };
+		C23C280C27298AD900E11F6B /* FilterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23C280B27298AD900E11F6B /* FilterService.swift */; };
 		C25D6BDC2720269200045B6D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25D6BDB2720269200045B6D /* AppDelegate.swift */; };
 		C25D6BDE2720269200045B6D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25D6BDD2720269200045B6D /* SceneDelegate.swift */; };
 		C25D6BE02720269200045B6D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25D6BDF2720269200045B6D /* ViewController.swift */; };
@@ -14,9 +17,7 @@
 		C25D6BE52720269400045B6D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C25D6BE42720269400045B6D /* Assets.xcassets */; };
 		C25D6BE82720269400045B6D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C25D6BE62720269400045B6D /* LaunchScreen.storyboard */; };
 		C2D83A822725560C0097D512 /* DashboardItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D83A812725560C0097D512 /* DashboardItem.swift */; };
-		C2D83A85272556980097D512 /* Priority.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D83A84272556980097D512 /* Priority.swift */; };
 		C2D83A87272556EF0097D512 /* DashboardIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D83A86272556EF0097D512 /* DashboardIcon.swift */; };
-		C2D83A8B272558640097D512 /* PriorityIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D83A8A272558640097D512 /* PriorityIcon.swift */; };
 		C2D83A8D272559680097D512 /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D83A8C272559680097D512 /* Status.swift */; };
 		C2D83A8F27257FC30097D512 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D83A8E27257FC30097D512 /* User.swift */; };
 		C2D83A91272583290097D512 /* TestData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D83A90272583290097D512 /* TestData.swift */; };
@@ -32,9 +33,13 @@
 		C2E2D56B272304A500D0D324 /* TicketCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E2D569272304A500D0D324 /* TicketCell.swift */; };
 		C2E2D56E27233E9000D0D324 /* Ticket.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E2D56D27233E9000D0D324 /* Ticket.swift */; };
 		C2E2D5722723554A00D0D324 /* TicketCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2E2D5712723554A00D0D324 /* TicketCell.xib */; };
+		C2E52D0627293D190054CBE1 /* TicketsOptionsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E52D0527293D190054CBE1 /* TicketsOptionsController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C23C28042729752A00E11F6B /* Priority.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Priority.swift; sourceTree = "<group>"; };
+		C23C28092729893900E11F6B /* PriorityState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriorityState.swift; sourceTree = "<group>"; };
+		C23C280B27298AD900E11F6B /* FilterService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterService.swift; sourceTree = "<group>"; };
 		C25D6BD82720269200045B6D /* Zammad-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Zammad-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C25D6BDB2720269200045B6D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C25D6BDD2720269200045B6D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -44,9 +49,7 @@
 		C25D6BE72720269400045B6D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C25D6BE92720269400045B6D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C2D83A812725560C0097D512 /* DashboardItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardItem.swift; sourceTree = "<group>"; };
-		C2D83A84272556980097D512 /* Priority.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Priority.swift; sourceTree = "<group>"; };
 		C2D83A86272556EF0097D512 /* DashboardIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardIcon.swift; sourceTree = "<group>"; };
-		C2D83A8A272558640097D512 /* PriorityIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriorityIcon.swift; sourceTree = "<group>"; };
 		C2D83A8C272559680097D512 /* Status.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Status.swift; sourceTree = "<group>"; };
 		C2D83A8E27257FC30097D512 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		C2D83A90272583290097D512 /* TestData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestData.swift; sourceTree = "<group>"; };
@@ -62,6 +65,7 @@
 		C2E2D569272304A500D0D324 /* TicketCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketCell.swift; sourceTree = "<group>"; };
 		C2E2D56D27233E9000D0D324 /* Ticket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ticket.swift; sourceTree = "<group>"; };
 		C2E2D5712723554A00D0D324 /* TicketCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TicketCell.xib; sourceTree = "<group>"; };
+		C2E52D0527293D190054CBE1 /* TicketsOptionsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketsOptionsController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +79,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C23C2806272983DE00E11F6B /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				C23C280B27298AD900E11F6B /* FilterService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		C23C280D272ABAB000E11F6B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C2E2D55D272301D600D0D324 /* XiB */,
+				C25D6BE12720269200045B6D /* Main.storyboard */,
+				C25D6BE62720269400045B6D /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		C25D6BCF2720269100045B6D = {
 			isa = PBXGroup;
 			children = (
@@ -94,18 +116,13 @@
 		C25D6BDA2720269200045B6D /* Zammad-app */ = {
 			isa = PBXGroup;
 			children = (
-				C2D83A90272583290097D512 /* TestData.swift */,
-				C2D83A83272556870097D512 /* Enum */,
-				C2E2D55A272301B200D0D324 /* Controller */,
-				C2E2D55D272301D600D0D324 /* XiB */,
-				C2E2D55C272301C200D0D324 /* Extension */,
-				C2E2D55B272301BA00D0D324 /* Model */,
-				C2E2D4AF2722E64800D0D324 /* Fonts */,
 				C25D6BDB2720269200045B6D /* AppDelegate.swift */,
 				C25D6BDD2720269200045B6D /* SceneDelegate.swift */,
-				C25D6BE12720269200045B6D /* Main.storyboard */,
+				C2E2D55B272301BA00D0D324 /* Model */,
+				C23C280D272ABAB000E11F6B /* View */,
+				C2E2D55A272301B200D0D324 /* Controller */,
+				C2E2D4AF2722E64800D0D324 /* Fonts */,
 				C25D6BE42720269400045B6D /* Assets.xcassets */,
-				C25D6BE62720269400045B6D /* LaunchScreen.storyboard */,
 				C25D6BE92720269400045B6D /* Info.plist */,
 			);
 			path = "Zammad-app";
@@ -114,10 +131,9 @@
 		C2D83A83272556870097D512 /* Enum */ = {
 			isa = PBXGroup;
 			children = (
-				C2D83A84272556980097D512 /* Priority.swift */,
-				C2D83A8A272558640097D512 /* PriorityIcon.swift */,
 				C2D83A8C272559680097D512 /* Status.swift */,
 				C2D83A86272556EF0097D512 /* DashboardIcon.swift */,
+				C23C28092729893900E11F6B /* PriorityState.swift */,
 			);
 			path = Enum;
 			sourceTree = "<group>";
@@ -138,6 +154,7 @@
 			isa = PBXGroup;
 			children = (
 				C2E2D5652723046100D0D324 /* TicketsController.swift */,
+				C2E52D0527293D190054CBE1 /* TicketsOptionsController.swift */,
 				C25D6BDF2720269200045B6D /* ViewController.swift */,
 				C2E2D5672723048100D0D324 /* DashboardController.swift */,
 			);
@@ -147,18 +164,15 @@
 		C2E2D55B272301BA00D0D324 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				C23C2806272983DE00E11F6B /* Service */,
+				C2D83A83272556870097D512 /* Enum */,
 				C2D83A8E27257FC30097D512 /* User.swift */,
 				C2E2D56D27233E9000D0D324 /* Ticket.swift */,
 				C2D83A812725560C0097D512 /* DashboardItem.swift */,
+				C23C28042729752A00E11F6B /* Priority.swift */,
+				C2D83A90272583290097D512 /* TestData.swift */,
 			);
 			path = Model;
-			sourceTree = "<group>";
-		};
-		C2E2D55C272301C200D0D324 /* Extension */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Extension;
 			sourceTree = "<group>";
 		};
 		C2E2D55D272301D600D0D324 /* XiB */ = {
@@ -251,6 +265,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				C2D83A8F27257FC30097D512 /* User.swift in Sources */,
+				C23C280A2729893900E11F6B /* PriorityState.swift in Sources */,
+				C23C280C27298AD900E11F6B /* FilterService.swift in Sources */,
 				C25D6BE02720269200045B6D /* ViewController.swift in Sources */,
 				C2E2D5662723046100D0D324 /* TicketsController.swift in Sources */,
 				C2E2D5682723048100D0D324 /* DashboardController.swift in Sources */,
@@ -258,12 +274,12 @@
 				C2D83A91272583290097D512 /* TestData.swift in Sources */,
 				C2D83A822725560C0097D512 /* DashboardItem.swift in Sources */,
 				C2E2D56B272304A500D0D324 /* TicketCell.swift in Sources */,
+				C23C28052729752A00E11F6B /* Priority.swift in Sources */,
 				C25D6BDC2720269200045B6D /* AppDelegate.swift in Sources */,
 				C2E2D56E27233E9000D0D324 /* Ticket.swift in Sources */,
 				C2D83A95272699C70097D512 /* DashboardCell.swift in Sources */,
+				C2E52D0627293D190054CBE1 /* TicketsOptionsController.swift in Sources */,
 				C25D6BDE2720269200045B6D /* SceneDelegate.swift in Sources */,
-				C2D83A85272556980097D512 /* Priority.swift in Sources */,
-				C2D83A8B272558640097D512 /* PriorityIcon.swift in Sources */,
 				C2D83A8D272559680097D512 /* Status.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

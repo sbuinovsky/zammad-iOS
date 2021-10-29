@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -29,19 +29,19 @@
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g5A-jH-t2v">
-                        <rect key="frame" x="60" y="15.5" width="277" height="29"/>
+                        <rect key="frame" x="70" y="15.5" width="267" height="29"/>
                         <fontDescription key="fontDescription" name="SFProRounded-Regular" family="SF Pro Rounded" pointSize="24"/>
                         <color key="textColor" red="0.015686274510000001" green="0.34901960780000002" blue="0.44705882349999998" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HlO-YV-ZH8">
-                        <rect key="frame" x="60" y="54.5" width="277" height="24"/>
+                        <rect key="frame" x="70" y="54.5" width="267" height="24"/>
                         <fontDescription key="fontDescription" name="SFProRounded-Regular" family="SF Pro Rounded" pointSize="20"/>
                         <color key="textColor" red="0.30980392159999998" green="0.30980392159999998" blue="0.30980392159999998" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Average" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Ua-fn-e0h">
-                        <rect key="frame" x="60" y="78.5" width="277" height="27.5"/>
+                        <rect key="frame" x="70" y="78.5" width="267" height="27.5"/>
                         <fontDescription key="fontDescription" name="SFProRounded-Regular" family="SF Pro Rounded" pointSize="20"/>
                         <color key="textColor" red="0.30980392159999998" green="0.30980392159999998" blue="0.30980392159999998" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
@@ -52,7 +52,7 @@
                     <constraint firstItem="0Ua-fn-e0h" firstAttribute="leading" secondItem="g5A-jH-t2v" secondAttribute="leading" id="Biq-hM-81p"/>
                     <constraint firstAttribute="bottom" secondItem="0Ua-fn-e0h" secondAttribute="bottom" constant="16" id="C05-E7-oOe"/>
                     <constraint firstAttribute="trailing" secondItem="0Ua-fn-e0h" secondAttribute="trailing" constant="10" id="CwQ-lH-fqY"/>
-                    <constraint firstItem="g5A-jH-t2v" firstAttribute="leading" secondItem="TXc-sf-3dT" secondAttribute="trailing" constant="10" id="Ke6-eH-dDJ"/>
+                    <constraint firstItem="g5A-jH-t2v" firstAttribute="leading" secondItem="TXc-sf-3dT" secondAttribute="trailing" constant="20" id="Ke6-eH-dDJ"/>
                     <constraint firstItem="HlO-YV-ZH8" firstAttribute="top" secondItem="g5A-jH-t2v" secondAttribute="bottom" constant="10" id="XUL-3S-S2C"/>
                     <constraint firstItem="TXc-sf-3dT" firstAttribute="leading" secondItem="CZs-tW-4PY" secondAttribute="leading" constant="10" id="ai9-e7-WxN"/>
                     <constraint firstAttribute="trailing" secondItem="g5A-jH-t2v" secondAttribute="trailing" constant="10" id="gMR-Ro-cNe"/>

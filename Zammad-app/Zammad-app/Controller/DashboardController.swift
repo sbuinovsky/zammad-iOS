@@ -11,6 +11,7 @@ class DashboardController: UIViewController, UITableViewDelegate, UITableViewDat
 
     @IBOutlet weak var tableView: UITableView!
     
+    private var dashboardItems: [DashboardItem] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,8 +20,9 @@ class DashboardController: UIViewController, UITableViewDelegate, UITableViewDat
         tableView.dataSource = self
         
         let cellNib = UINib(nibName: "DashboardCell", bundle: nil)
-        
         tableView.register(cellNib, forCellReuseIdentifier: "dashboardCell")
+        
+        dashboardItems = testDashboardItems
     }
     
     

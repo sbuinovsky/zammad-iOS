@@ -10,8 +10,14 @@ import UIKit
 
 class TicketsController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+    
     @IBOutlet weak var tableView: UITableView!
-   
+    @IBOutlet weak var optionsIcon: UIImageView!
+    
+    private var tickets: [Ticket] = []
+    private var filteredTickets: [Ticket] = []
+    private var filterParams: [PriorityState] = []
+    private let filterService: FilterServiceProtocol = FilterService()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,23 +26,73 @@ class TicketsController: UIViewController, UITableViewDelegate, UITableViewDataS
         tableView.dataSource = self
         
         let cellNib = UINib(nibName: "TicketCell", bundle: nil)
-        
         tableView.register(cellNib, forCellReuseIdentifier: "ticketCell")
+        
+        tableView.estimatedRowHeight = 150
+        
+        tickets = testTickets
+        filteredTickets = tickets
+        
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        
+        if !filterParams.isEmpty {
+            filteredTickets = filterService.filterTickets(for: tickets, with: filterParams)
+        }
+    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return tickets.count
+        return filteredTickets.count
     }
     
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ticketCell", for: indexPath) as! TicketCell
         
-        let ticket = tickets[indexPath.row]
+        self.tableView.deselectRow(at: indexPath, animated: true)
+        
+        let ticket = filteredTickets[indexPath.row]
         
         cell.configure(with: ticket)
         
         return cell
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "ticketsOptionsSegue" {
+            let destController = segue.destination as! TicketsOptionsController
+            destController.filterParams = filterParams
+            destController.delegate = self
+        }
+    }
+    
+    @IBAction func optionsIconTapped(_ sender: Any) {
+        performSegue(withIdentifier: "ticketsOptionsSegue", sender: UITapGestureRecognizer.self)
+
+    }
 }
+
+
+//MARK: - Extension
+extension TicketsController: TicketsOptionsControllerDelegate {
+    
+    /// filtering tickets and reloads tableView
+    /// - Parameter params: [PriorityState]
+    func updateFilterParams(with params: [PriorityState]) {
+        self.filterParams = params
+        if filterParams.isEmpty {
+            filteredTickets = tickets
+        } else {
+            self.filteredTickets = filterService.filterTickets(for: tickets, with: filterParams)
+        }
+        
+        self.tableView.reloadData()
+    }
+    
+  
+}
+
+
