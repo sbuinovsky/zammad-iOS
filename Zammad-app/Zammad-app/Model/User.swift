@@ -14,12 +14,12 @@ class User {
     var lastName: String
     var email: String
     var organization: String
-    var isVIP: Bool
-    var web: String
-    var phone: String
-    var mobile: String
-    var address: String
-    var group: String
+    var isVIP = false
+    var web = ""
+    var phone = ""
+    var mobile = ""
+    var address = ""
+    var group = ""
     
     var shortName: String {
         if firstName.first != nil {
@@ -30,6 +30,8 @@ class User {
         
     }
     
+    
+    //MARK: - Initialization
     init(id: Int, firstName: String, lastName: String, email: String,
          organization: String, isVIP: Bool) {
         self.id = id
@@ -37,11 +39,5 @@ class User {
         self.lastName = lastName
         self.email = email
         self.organization = organization
-        self.isVIP = isVIP
-        self.web = ""
-        self.phone = ""
-        self.mobile = ""
-        self.address = ""
-        self.group = ""
     }
 }

@@ -10,14 +10,16 @@ import UIKit
 
 class TicketsController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    
+    //MARK: - IBOutlets
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var optionsIcon: UIImageView!
     
+    //MARK: - Variables
     private var tickets: [Ticket] = []
     private var filteredTickets: [Ticket] = []
     private var filterParams: [PriorityState] = []
     private let filterService: FilterServiceProtocol = FilterService()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,6 +37,7 @@ class TicketsController: UIViewController, UITableViewDelegate, UITableViewDataS
         
     }
     
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         
@@ -43,6 +46,8 @@ class TicketsController: UIViewController, UITableViewDelegate, UITableViewDataS
         }
     }
     
+    
+    //MARK: - TableView configure
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return filteredTickets.count
     }
@@ -60,6 +65,7 @@ class TicketsController: UIViewController, UITableViewDelegate, UITableViewDataS
         return cell
     }
     
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if segue.identifier == "ticketsOptionsSegue" {
@@ -69,6 +75,8 @@ class TicketsController: UIViewController, UITableViewDelegate, UITableViewDataS
         }
     }
     
+    
+    //MARK: - IBActions
     @IBAction func optionsIconTapped(_ sender: Any) {
         performSegue(withIdentifier: "ticketsOptionsSegue", sender: UITapGestureRecognizer.self)
 
@@ -79,8 +87,7 @@ class TicketsController: UIViewController, UITableViewDelegate, UITableViewDataS
 //MARK: - Extension
 extension TicketsController: TicketsOptionsControllerDelegate {
     
-    /// filtering tickets and reloads tableView
-    /// - Parameter params: [PriorityState]
+    //MARK: - Public methods
     func updateFilterParams(with params: [PriorityState]) {
         self.filterParams = params
         if filterParams.isEmpty {

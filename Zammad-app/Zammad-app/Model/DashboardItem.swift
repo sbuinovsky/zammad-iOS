@@ -8,16 +8,22 @@
 import Foundation
 import UIKit
 
-class DashboardItem {
+
+struct DashboardItem {
     var icon: DashboardIcon
     var title: String
     var description: String
     var average: String
-    
-    init(icon: DashboardIcon, title: String, description: String, average: String) {
-        self.icon = icon
-        self.title = title
-        self.description = description
-        self.average = average
+}
+
+
+//MARK: - Extension
+extension DashboardItem {
+    enum DashboardIcon: String {
+        case waitingTime = "waiting-time-icon.svg"
+        case mood = "mood-icon.svg"
+        case assigned = "assigned-icon.svg"
+        case ticketsInProgress = "tickets-in-progress-icon.svg"
+        case reopeningRate = "reopening-rate.svg"
     }
 }

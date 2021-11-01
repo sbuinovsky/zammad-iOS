@@ -8,10 +8,13 @@
 import UIKit
 
 class DashboardController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-
+    
+    //MARK: - IBOutlets
     @IBOutlet weak var tableView: UITableView!
     
+    //MARK: - Variables
     private var dashboardItems: [DashboardItem] = []
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,6 +29,7 @@ class DashboardController: UIViewController, UITableViewDelegate, UITableViewDat
     }
     
     
+    //MARK: - TableView configure
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         dashboardItems.count
     }

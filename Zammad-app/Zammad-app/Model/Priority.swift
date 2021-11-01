@@ -7,10 +7,18 @@
 
 import UIKit
 
+enum PriorityState: String {
+    case none = "None"
+    case low = "Low"
+    case medium = "Medium"
+    case high = "High"
+}
+
+
 class Priority {
     
     var state: PriorityState
-    var isSelected: Bool
+    var isSelected = false
     var icon: UIImage? {
         switch state {
         case .none:
@@ -24,9 +32,22 @@ class Priority {
         }
     }
     
+    //MARK: - Initialization
+    init() {
+        state = .none
+    }
     
-    init(_ state: PriorityState) {
+    
+    init(state: PriorityState) {
         self.state = state
-        self.isSelected = false
+    }
+    
+    
+    //MARK: - Public methods
+    func getPriorityDict() -> [PriorityState: Priority] {
+        [.none: Priority(state: .none),
+        .low: Priority(state: .low),
+        .medium: Priority(state: .medium),
+        .high: Priority(state: .high)]
     }
 }

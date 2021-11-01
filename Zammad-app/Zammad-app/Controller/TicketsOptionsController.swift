@@ -14,26 +14,25 @@ protocol TicketsOptionsControllerDelegate: AnyObject {
 
 class TicketsOptionsController: UIViewController {
 
+    //MARK: - IBOutlets
     @IBOutlet weak var closeIcon: UIImageView!
     @IBOutlet weak var priorityHighIcon: UIImageView!
     @IBOutlet weak var priorityMediumIcon: UIImageView!
     @IBOutlet weak var priorityLowIcon: UIImageView!
     @IBOutlet weak var priorityNoneIcon: UIImageView!
     
-    private var priorityDict: [PriorityState: Priority] = [
-        .none: Priority(.none),
-        .low: Priority(.low),
-        .medium: Priority(.medium),
-        .high: Priority(.high)
-    ]
     
+    //MARK: - Variables
     weak var delegate: TicketsOptionsControllerDelegate?
-    
     var filterParams: [PriorityState]!
+    private var priorityDict: [PriorityState: Priority]?
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let priority = Priority()
+        priorityDict = priority.getPriorityDict()
     }
     
     
@@ -42,8 +41,15 @@ class TicketsOptionsController: UIViewController {
         setState(for: filterParams)
     }
     
+    
+    //MARK: - IBActions
     @IBAction func closeIconPressed(_ sender: UITapGestureRecognizer) {
         var newFilters: [PriorityState] = []
+        
+        guard let priorityDict = priorityDict else {
+            return
+        }
+
         for (key, value) in priorityDict {
             if value.isSelected {
                 newFilters.append(key)
@@ -79,18 +85,17 @@ class TicketsOptionsController: UIViewController {
 // MARK: - Extension
 extension TicketsOptionsController {
     
-    
+    //MARK: - Private methods
     private func setState(for params: [PriorityState]) {
         
         for item in params {
             setPriorityIcon(for: item)
         }
-        
     }
     
     
     private func setPriorityIcon(for state: PriorityState) {
-        guard let priorityItem = priorityDict[state] else {return}
+        guard let priorityItem = priorityDict?[state] else {return}
 
         priorityItem.isSelected = priorityItem.isSelected ? false : true
         
@@ -105,5 +110,4 @@ extension TicketsOptionsController {
             priorityHighIcon.image = priorityItem.icon
         }
     }
-    
 }
