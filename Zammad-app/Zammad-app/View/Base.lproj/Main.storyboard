@@ -47,8 +47,8 @@
                                         <rect key="frame" x="154.5" y="348" width="37" height="37"/>
                                         <color key="color" red="0.95294117649999999" green="0.59607843140000005" blue="0.015686274510000001" alpha="1" colorSpace="calibratedRGB"/>
                                     </activityIndicatorView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5V3-AA-xxh">
-                                        <rect key="frame" x="139" y="395" width="68" height="24"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Connecting..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5V3-AA-xxh">
+                                        <rect key="frame" x="116.5" y="395" width="113" height="24"/>
                                         <fontDescription key="fontDescription" name="SFProRounded-Regular" family="SF Pro Rounded" pointSize="20"/>
                                         <color key="textColor" red="0.95294117649999999" green="0.59607843140000005" blue="0.015686274510000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -292,6 +292,42 @@
                                     <constraint firstAttribute="trailing" secondItem="wDV-M0-AOH" secondAttribute="trailing" constant="10" id="uZ9-Rt-Tq6"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u92-Fp-sxp">
+                                <rect key="frame" x="10" y="263.5" width="394" height="89.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Group:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2qO-e4-urN">
+                                        <rect key="frame" x="10" y="8" width="75.5" height="24"/>
+                                        <fontDescription key="fontDescription" name="SFProRounded-Regular" family="SF Pro Rounded" pointSize="20"/>
+                                        <color key="textColor" red="0.34509804840000002" green="0.34509804840000002" blue="0.34901961679999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jed-vk-xJP">
+                                        <rect key="frame" x="157" y="42" width="80" height="37.5"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="Select">
+                                                    <attributes>
+                                                        <font key="NSFont" size="20" name="SFPro-Regular"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <segue destination="Zsf-qP-TDE" kind="presentation" modalPresentationStyle="automatic" id="DQn-Bt-Thb"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="2qO-e4-urN" firstAttribute="top" secondItem="u92-Fp-sxp" secondAttribute="top" constant="8" id="5hK-qC-J2m"/>
+                                    <constraint firstAttribute="bottom" secondItem="Jed-vk-xJP" secondAttribute="bottom" constant="10" id="6zu-EW-Mfr"/>
+                                    <constraint firstItem="Jed-vk-xJP" firstAttribute="top" secondItem="2qO-e4-urN" secondAttribute="bottom" constant="10" id="CQu-75-RSx"/>
+                                    <constraint firstAttribute="trailing" secondItem="2qO-e4-urN" secondAttribute="trailing" constant="308.5" id="hTi-tH-KIB"/>
+                                    <constraint firstItem="2qO-e4-urN" firstAttribute="leading" secondItem="u92-Fp-sxp" secondAttribute="leading" constant="10" id="mPP-CU-sNj"/>
+                                    <constraint firstItem="Jed-vk-xJP" firstAttribute="centerX" secondItem="u92-Fp-sxp" secondAttribute="centerX" id="qYu-PU-ziH"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Kcl-G5-wAj"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -299,8 +335,11 @@
                             <constraint firstItem="HKA-e9-ESZ" firstAttribute="leading" secondItem="gej-jl-eHC" secondAttribute="leading" id="2iY-ho-zRa"/>
                             <constraint firstItem="gej-jl-eHC" firstAttribute="top" secondItem="Kcl-G5-wAj" secondAttribute="top" constant="20" id="CgW-tm-Soc"/>
                             <constraint firstItem="Kcl-G5-wAj" firstAttribute="trailing" secondItem="4zr-hA-OXS" secondAttribute="trailing" constant="20" id="Gwf-jS-zMu"/>
+                            <constraint firstItem="u92-Fp-sxp" firstAttribute="top" secondItem="HKA-e9-ESZ" secondAttribute="bottom" constant="10" id="HWC-9g-uHe"/>
+                            <constraint firstItem="Kcl-G5-wAj" firstAttribute="trailing" secondItem="u92-Fp-sxp" secondAttribute="trailing" constant="10" id="HjL-WR-Qpw"/>
                             <constraint firstItem="HKA-e9-ESZ" firstAttribute="top" secondItem="gej-jl-eHC" secondAttribute="bottom" constant="10" id="L03-im-pRu"/>
                             <constraint firstItem="HKA-e9-ESZ" firstAttribute="trailing" secondItem="4zr-hA-OXS" secondAttribute="trailing" id="MV3-na-0ai"/>
+                            <constraint firstItem="u92-Fp-sxp" firstAttribute="leading" secondItem="Kcl-G5-wAj" secondAttribute="leading" constant="10" id="et6-AJ-z6C"/>
                             <constraint firstItem="4zr-hA-OXS" firstAttribute="centerY" secondItem="gej-jl-eHC" secondAttribute="centerY" id="r6O-GO-YQy"/>
                             <constraint firstItem="gej-jl-eHC" firstAttribute="leading" secondItem="Kcl-G5-wAj" secondAttribute="leading" constant="20" id="sED-Uj-zrd"/>
                         </constraints>
@@ -444,6 +483,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vpl-Pc-kA6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2806" y="-200"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="sJf-CA-p5Z">
+            <objects>
+                <viewController modalPresentationStyle="pageSheet" id="Zsf-qP-TDE" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gUC-oj-c7q">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="bwN-2o-li5"/>
+                        <color key="backgroundColor" red="0.34509804840000002" green="0.34509804840000002" blue="0.34901961679999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hj0-8d-Om6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3697" y="-885"/>
         </scene>
     </scenes>
     <resources>

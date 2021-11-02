@@ -7,7 +7,7 @@
 
 import Foundation
 
-class User {
+class User: Hashable, Equatable {
     
     let id: Int
     var firstName: String
@@ -30,7 +30,6 @@ class User {
         
     }
     
-    
     //MARK: - Initialization
     init(id: Int, firstName: String, lastName: String, email: String,
          organization: String, isVIP: Bool) {
@@ -39,5 +38,13 @@ class User {
         self.lastName = lastName
         self.email = email
         self.organization = organization
+    }
+    
+    static func == (lhs: User, rhs: User) -> Bool {
+        lhs.id.hashValue == rhs.id.hashValue
+    }
+    
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(id)
     }
 }

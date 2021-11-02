@@ -7,7 +7,7 @@
 
 import UIKit
 
-enum PriorityState: String {
+enum PriorityState: String, CaseIterable {
     case none = "None"
     case low = "Low"
     case medium = "Medium"
@@ -15,8 +15,8 @@ enum PriorityState: String {
 }
 
 
-class Priority {
-    
+class Priority: Hashable, Equatable {
+
     var state: PriorityState
     var isSelected = false
     var icon: UIImage? {
@@ -32,22 +32,31 @@ class Priority {
         }
     }
     
+    
     //MARK: - Initialization
     init() {
         state = .none
     }
     
-    
     init(state: PriorityState) {
         self.state = state
     }
     
-    
     //MARK: - Public methods
     func getPriorityDict() -> [PriorityState: Priority] {
-        [.none: Priority(state: .none),
-        .low: Priority(state: .low),
-        .medium: Priority(state: .medium),
-        .high: Priority(state: .high)]
+        var dict: [PriorityState: Priority] = [:]
+        for item in PriorityState.allCases {
+            dict.updateValue(Priority(state: item), forKey: item)
+        }
+        
+        return dict
+    }
+    
+    static func == (lhs: Priority, rhs: Priority) -> Bool {
+        lhs.state.rawValue.hashValue == rhs.state.rawValue.hashValue
+    }
+    
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(state.rawValue)
     }
 }

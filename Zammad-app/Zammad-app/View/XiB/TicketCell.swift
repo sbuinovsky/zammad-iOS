@@ -17,7 +17,6 @@ class TicketCell: UITableViewCell {
     @IBOutlet weak var dateCreatedLabel: UILabel!
     @IBOutlet weak var dateChangedLabel: UILabel!
     
-    
     func configure(with ticket: Ticket) {
         statusImage.image = ticket.priority.icon
         ticketTitle.text = ticket.title

@@ -7,14 +7,13 @@
 
 import UIKit
 
-class DashboardController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-    
-    //MARK: - IBOutlets
+class DashboardController: UIViewController,
+                           UITableViewDelegate,
+                           UITableViewDataSource {
+
     @IBOutlet weak var tableView: UITableView!
     
-    //MARK: - Variables
     private var dashboardItems: [DashboardItem] = []
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,12 +27,10 @@ class DashboardController: UIViewController, UITableViewDelegate, UITableViewDat
         dashboardItems = testDashboardItems
     }
     
-    
     //MARK: - TableView configure
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         dashboardItems.count
     }
-    
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "dashboardCell", for: indexPath) as! DashboardCell

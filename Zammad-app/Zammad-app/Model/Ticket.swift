@@ -23,8 +23,9 @@ struct Ticket {
     }
 }
 
+
 extension Ticket {
-    enum Status: String {
+    enum Status: String, CaseIterable {
         case none = "None"
         case new = "New"
         case open = "Open"

@@ -7,8 +7,9 @@
 
 import UIKit
 
-
-class TicketsController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class TicketsController: UIViewController,
+                         UITableViewDelegate,
+                         UITableViewDataSource {
     
     //MARK: - IBOutlets
     @IBOutlet weak var tableView: UITableView!
@@ -17,9 +18,9 @@ class TicketsController: UIViewController, UITableViewDelegate, UITableViewDataS
     //MARK: - Variables
     private var tickets: [Ticket] = []
     private var filteredTickets: [Ticket] = []
-    private var filterParams: [PriorityState] = []
+    private var currentFilters: ([Priority], [String], [User])!
     private let filterService: FilterServiceProtocol = FilterService()
-    
+    private let ticketService: TicketServiceProtocol = TicketService()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,21 +38,17 @@ class TicketsController: UIViewController, UITableViewDelegate, UITableViewDataS
         
     }
     
-    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         
-        if !filterParams.isEmpty {
-            filteredTickets = filterService.filterTickets(for: tickets, with: filterParams)
-        }
+        currentFilters = ticketService.getFilterParametes(for: tickets)
+        filteredTickets = filterService.filterTickets(for: tickets, with: currentFilters)
     }
-    
     
     //MARK: - TableView configure
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return filteredTickets.count
     }
-    
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ticketCell", for: indexPath) as! TicketCell
@@ -65,16 +62,14 @@ class TicketsController: UIViewController, UITableViewDelegate, UITableViewDataS
         return cell
     }
     
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if segue.identifier == "ticketsOptionsSegue" {
             let destController = segue.destination as! TicketsOptionsController
-            destController.filterParams = filterParams
+            destController.filterParams = currentFilters
             destController.delegate = self
         }
     }
-    
     
     //MARK: - IBActions
     @IBAction func optionsIconTapped(_ sender: Any) {
@@ -88,15 +83,10 @@ class TicketsController: UIViewController, UITableViewDelegate, UITableViewDataS
 extension TicketsController: TicketsOptionsControllerDelegate {
     
     //MARK: - Public methods
-    func updateFilterParams(with params: [PriorityState]) {
-        self.filterParams = params
-        if filterParams.isEmpty {
-            filteredTickets = tickets
-        } else {
-            self.filteredTickets = filterService.filterTickets(for: tickets, with: filterParams)
-        }
-        
-        self.tableView.reloadData()
+    func updateFilterParams(with params: ([Priority], [String], [User])) {
+        currentFilters = params
+        filteredTickets = filterService.filterTickets(for: tickets, with: currentFilters)
+        tableView.reloadData()
     }
     
   

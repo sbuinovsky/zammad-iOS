@@ -10,18 +10,21 @@ import Foundation
 protocol FilterServiceProtocol {
     
     func filterTickets(for tickets: [Ticket],
-                       with parameters: [PriorityState]) -> [Ticket]
+                       with parameters: ([Priority], [String], [User])) -> [Ticket]
     
 }
 
 
 class FilterService: FilterServiceProtocol {
     
-    
     func filterTickets(for tickets: [Ticket],
-                       with parameters: [PriorityState]) -> [Ticket] {
+                       with parameters: ([Priority], [String], [User])) -> [Ticket] {
        
-        tickets.filter { parameters.contains($0.priority.state) }
+        tickets.filter { ticket in
+            parameters.0.contains(ticket.priority) &&
+            parameters.1.contains(ticket.group) &&
+            parameters.2.contains(ticket.owner)
+        }
     }
     
 }

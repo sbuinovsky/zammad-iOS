@@ -14,7 +14,6 @@ class DashboardCell: UITableViewCell {
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var averageLabel: UILabel!
     
-    
     func configure(with item: DashboardItem) {
         iconImage.image = UIImage(named: item.icon.rawValue)
         titleLabel.text = item.title
