@@ -18,6 +18,9 @@ struct Ticket {
     var group: String {
         owner.organization
     }
+    var organization: String {
+        customer.organization
+    }
     var ownerName: String {
         owner.shortName
     }

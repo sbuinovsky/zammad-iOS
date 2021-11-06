@@ -128,13 +128,13 @@
         <!--Ticket options-->
         <scene sceneID="jfo-HH-j87">
             <objects>
-                <viewController storyboardIdentifier="TicketsOptionsController" title="Ticket options" id="bF2-XJ-riY" customClass="TicketsOptionsController" customModule="Zammad_app" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TicketsOptionsController" title="Ticket options" modalPresentationStyle="fullScreen" id="bF2-XJ-riY" customClass="TicketsOptionsController" customModule="Zammad_app" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="HvH-bE-mNP">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="close-cross-icon" translatesAutoresizingMaskIntoConstraints="NO" id="4zr-hA-OXS">
-                                <rect key="frame" x="374" y="26" width="20" height="20"/>
+                                <rect key="frame" x="374" y="70" width="20" height="20"/>
                                 <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="4zr-hA-OXS" secondAttribute="height" multiplier="1:1" id="76m-F6-8BO"/>
@@ -145,13 +145,13 @@
                                 </connections>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Options" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gej-jl-eHC">
-                                <rect key="frame" x="20" y="20" width="86.5" height="31.5"/>
+                                <rect key="frame" x="20" y="64" width="86.5" height="31.5"/>
                                 <fontDescription key="fontDescription" name="SFProRounded-Regular" family="SF Pro Rounded" pointSize="26"/>
                                 <color key="textColor" red="0.015686274510000001" green="0.34901960780000002" blue="0.44705882349999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HKA-e9-ESZ" userLabel="PriorityView">
-                                <rect key="frame" x="20" y="61.5" width="374" height="192"/>
+                                <rect key="frame" x="20" y="105.5" width="374" height="192"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Priority:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zqn-UH-giI">
                                         <rect key="frame" x="10" y="10" width="63.5" height="24"/>
@@ -293,16 +293,17 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u92-Fp-sxp">
-                                <rect key="frame" x="10" y="263.5" width="394" height="89.5"/>
+                                <rect key="frame" x="10" y="307.5" width="394" height="133.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Group:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2qO-e4-urN">
-                                        <rect key="frame" x="10" y="8" width="75.5" height="24"/>
+                                        <rect key="frame" x="20" y="8" width="65.5" height="24"/>
                                         <fontDescription key="fontDescription" name="SFProRounded-Regular" family="SF Pro Rounded" pointSize="20"/>
                                         <color key="textColor" red="0.34509804840000002" green="0.34509804840000002" blue="0.34901961679999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jed-vk-xJP">
-                                        <rect key="frame" x="157" y="42" width="80" height="37.5"/>
+                                        <rect key="frame" x="157" y="86" width="80" height="37.5"/>
+                                        <color key="tintColor" red="0.015686274510000001" green="0.34901960780000002" blue="0.44705882349999998" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain">
                                             <attributedString key="attributedTitle">
@@ -314,17 +315,26 @@
                                             </attributedString>
                                         </buttonConfiguration>
                                         <connections>
-                                            <segue destination="Zsf-qP-TDE" kind="presentation" modalPresentationStyle="automatic" id="DQn-Bt-Thb"/>
+                                            <segue destination="Zsf-qP-TDE" kind="presentation" modalPresentationStyle="fullScreen" id="DQn-Bt-Thb"/>
                                         </connections>
                                     </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xsw-wo-0kU">
+                                        <rect key="frame" x="10" y="42" width="374" height="24"/>
+                                        <fontDescription key="fontDescription" name="SFProRounded-Regular" family="SF Pro Rounded" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
+                                    <constraint firstItem="Jed-vk-xJP" firstAttribute="top" secondItem="Xsw-wo-0kU" secondAttribute="bottom" constant="20" id="4BQ-2H-6ve"/>
                                     <constraint firstItem="2qO-e4-urN" firstAttribute="top" secondItem="u92-Fp-sxp" secondAttribute="top" constant="8" id="5hK-qC-J2m"/>
                                     <constraint firstAttribute="bottom" secondItem="Jed-vk-xJP" secondAttribute="bottom" constant="10" id="6zu-EW-Mfr"/>
-                                    <constraint firstItem="Jed-vk-xJP" firstAttribute="top" secondItem="2qO-e4-urN" secondAttribute="bottom" constant="10" id="CQu-75-RSx"/>
+                                    <constraint firstItem="Xsw-wo-0kU" firstAttribute="leading" secondItem="u92-Fp-sxp" secondAttribute="leading" constant="10" id="EFk-Ja-YqA"/>
+                                    <constraint firstItem="Xsw-wo-0kU" firstAttribute="top" secondItem="2qO-e4-urN" secondAttribute="bottom" constant="10" id="Ne5-9q-gbg"/>
+                                    <constraint firstAttribute="trailing" secondItem="Xsw-wo-0kU" secondAttribute="trailing" constant="10" id="Qvt-tl-L8R"/>
                                     <constraint firstAttribute="trailing" secondItem="2qO-e4-urN" secondAttribute="trailing" constant="308.5" id="hTi-tH-KIB"/>
-                                    <constraint firstItem="2qO-e4-urN" firstAttribute="leading" secondItem="u92-Fp-sxp" secondAttribute="leading" constant="10" id="mPP-CU-sNj"/>
+                                    <constraint firstItem="2qO-e4-urN" firstAttribute="leading" secondItem="u92-Fp-sxp" secondAttribute="leading" constant="20" id="mPP-CU-sNj"/>
                                     <constraint firstItem="Jed-vk-xJP" firstAttribute="centerX" secondItem="u92-Fp-sxp" secondAttribute="centerX" id="qYu-PU-ziH"/>
                                 </constraints>
                             </view>
@@ -347,6 +357,7 @@
                     <navigationItem key="navigationItem" id="ZDm-fq-pBq"/>
                     <connections>
                         <outlet property="closeIcon" destination="4zr-hA-OXS" id="GWU-3b-aZs"/>
+                        <outlet property="groupsLabel" destination="Xsw-wo-0kU" id="b08-HI-gCe"/>
                         <outlet property="priorityHighIcon" destination="qOI-zh-X9c" id="7hZ-nM-r91"/>
                         <outlet property="priorityLowIcon" destination="NHc-hR-NaM" id="57u-bJ-Uq5"/>
                         <outlet property="priorityMediumIcon" destination="GCm-6t-dyY" id="23y-w7-WbZ"/>
@@ -442,7 +453,7 @@
                 <tapGestureRecognizer id="aqE-lS-sxC" userLabel="OptionsIconTap">
                     <connections>
                         <action selector="optionsIconTapped:" destination="KKE-bH-gFb" id="Wjw-bI-dz5"/>
-                        <segue destination="bF2-XJ-riY" kind="show" identifier="ticketsOptionsSegue" id="xJd-mf-Fh6"/>
+                        <segue destination="bF2-XJ-riY" kind="presentation" identifier="ticketsOptionsSegue" id="xJd-mf-Fh6"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
@@ -487,9 +498,9 @@
         <!--View Controller-->
         <scene sceneID="sJf-CA-p5Z">
             <objects>
-                <viewController modalPresentationStyle="pageSheet" id="Zsf-qP-TDE" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="Zsf-qP-TDE" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gUC-oj-c7q">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="bwN-2o-li5"/>
                         <color key="backgroundColor" red="0.34509804840000002" green="0.34509804840000002" blue="0.34901961679999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>

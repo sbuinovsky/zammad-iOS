@@ -18,7 +18,7 @@ enum PriorityState: String, CaseIterable {
 class Priority: Hashable, Equatable {
 
     var state: PriorityState
-    var isSelected = false
+    var isSelected = true
     var icon: UIImage? {
         switch state {
         case .none:
@@ -42,15 +42,7 @@ class Priority: Hashable, Equatable {
         self.state = state
     }
     
-    //MARK: - Public methods
-    func getPriorityDict() -> [PriorityState: Priority] {
-        var dict: [PriorityState: Priority] = [:]
-        for item in PriorityState.allCases {
-            dict.updateValue(Priority(state: item), forKey: item)
-        }
-        
-        return dict
-    }
+    //MARK: - Private methods
     
     static func == (lhs: Priority, rhs: Priority) -> Bool {
         lhs.state.rawValue.hashValue == rhs.state.rawValue.hashValue

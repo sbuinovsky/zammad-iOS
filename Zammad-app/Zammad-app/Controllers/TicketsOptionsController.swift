@@ -7,12 +7,6 @@
 
 import UIKit
 
-protocol TicketsOptionsControllerDelegate: AnyObject {
-    
-    func updateFilterParams(with params: ([Priority], [String], [User]))
-}
-
-
 class TicketsOptionsController: UIViewController {
 
     //MARK: - IBOutlets
@@ -21,10 +15,11 @@ class TicketsOptionsController: UIViewController {
     @IBOutlet weak var priorityMediumIcon: UIImageView!
     @IBOutlet weak var priorityLowIcon: UIImageView!
     @IBOutlet weak var priorityNoneIcon: UIImageView!
+    @IBOutlet weak var groupsLabel: UILabel!
     
     //MARK: - Variables
     weak var delegate: TicketsOptionsControllerDelegate?
-    var filterParams: ([Priority], [String], [User])!
+    var filter: Filter!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,15 +28,16 @@ class TicketsOptionsController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
-        setState(for: filterParams)
+        setPriorityState(for: filter)
+        setGroupsLabelState(for: filter)
     }
     
     //MARK: - IBActions
     @IBAction func closeIconPressed(_ sender: UITapGestureRecognizer) {
         
-        filterParams = prepareFilterParams(for: filterParams)
-        
-        delegate?.updateFilterParams(with: filterParams)
+        filter = prepareFilterParams(for: filter)
+    
+        delegate?.updateFilterParams(with: filter)
         self.dismiss(animated: true, completion: nil)
     }
     
@@ -67,12 +63,18 @@ class TicketsOptionsController: UIViewController {
 extension TicketsOptionsController {
     
     //MARK: - Private methods
-    private func setState(for params: ([Priority], [String], [User])) {
-        
-        for item in params.0 {
-            item.isSelected = true
-            setPriorityIcon(for: item)
+    private func setPriorityState(for filter: Filter) {
+        filter.priorities.forEach {
+            setPriorityIcon(for: $0)
         }
+    }
+    
+    private func setGroupsLabelState(for filter: Filter) {
+        let summaryString = filter.groups.reduce("", {
+            $0 == "" ? $1 : $0 + ",  " + $1
+        })
+        
+        groupsLabel.text = summaryString
     }
     
     private func setPriorityIcon(for priority: Priority) {
@@ -94,28 +96,25 @@ extension TicketsOptionsController {
         
         let priority = Priority(state: state)
         
-        if filterParams.0.contains(priority) {
-            for item in filterParams.0 {
+        if filter.priorities.contains(priority) {
+            for item in filter.priorities {
                 if item.state == state {
                     item.isSelected = item.isSelected ? false : true
                     setPriorityIcon(for: item)
                 }
             }
         } else {
-            filterParams.0.append(priority)
+            filter.priorities.append(priority)
+            setPriorityIcon(for: priority)
         }
-        
-        
     }
     
-    private func prepareFilterParams(for params: ([Priority], [String], [User]))
-                                            -> ([Priority], [String], [User]) {
-        var parameters = params
+    private func prepareFilterParams(for filter: Filter) -> Filter {
         
-        parameters.0 = params.0.filter { $0.isSelected == true }
-        parameters.0.forEach { $0.isSelected = false }
+        filter.priorities = filter.priorities.filter { $0.isSelected == true }
+        filter.priorities.forEach { $0.isSelected = true }
         
-        return parameters
+        return filter
     }
     
     

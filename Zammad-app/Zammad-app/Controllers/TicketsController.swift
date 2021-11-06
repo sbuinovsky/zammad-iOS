@@ -7,9 +7,12 @@
 
 import UIKit
 
-class TicketsController: UIViewController,
-                         UITableViewDelegate,
-                         UITableViewDataSource {
+protocol TicketsOptionsControllerDelegate: AnyObject {
+    
+    func updateFilterParams(with newFilter: Filter)
+}
+
+class TicketsController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     //MARK: - IBOutlets
     @IBOutlet weak var tableView: UITableView!
@@ -18,9 +21,7 @@ class TicketsController: UIViewController,
     //MARK: - Variables
     private var tickets: [Ticket] = []
     private var filteredTickets: [Ticket] = []
-    private var currentFilters: ([Priority], [String], [User])!
-    private let filterService: FilterServiceProtocol = FilterService()
-    private let ticketService: TicketServiceProtocol = TicketService()
+    private var filter = Filter()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,19 +31,19 @@ class TicketsController: UIViewController,
         
         let cellNib = UINib(nibName: "TicketCell", bundle: nil)
         tableView.register(cellNib, forCellReuseIdentifier: "ticketCell")
-        
         tableView.estimatedRowHeight = 150
         
         tickets = testTickets
         filteredTickets = tickets
+        
+        filter = filter.fillValues(with: tickets)
         
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         
-        currentFilters = ticketService.getFilterParametes(for: tickets)
-        filteredTickets = filterService.filterTickets(for: tickets, with: currentFilters)
+        filteredTickets = filter.filterTickets(for: tickets, with: filter)
     }
     
     //MARK: - TableView configure
@@ -54,9 +55,7 @@ class TicketsController: UIViewController,
         let cell = tableView.dequeueReusableCell(withIdentifier: "ticketCell", for: indexPath) as! TicketCell
         
         self.tableView.deselectRow(at: indexPath, animated: true)
-        
         let ticket = filteredTickets[indexPath.row]
-        
         cell.configure(with: ticket)
         
         return cell
@@ -66,7 +65,7 @@ class TicketsController: UIViewController,
         
         if segue.identifier == "ticketsOptionsSegue" {
             let destController = segue.destination as! TicketsOptionsController
-            destController.filterParams = currentFilters
+            destController.filter = filter
             destController.delegate = self
         }
     }
@@ -83,13 +82,12 @@ class TicketsController: UIViewController,
 extension TicketsController: TicketsOptionsControllerDelegate {
     
     //MARK: - Public methods
-    func updateFilterParams(with params: ([Priority], [String], [User])) {
-        currentFilters = params
-        filteredTickets = filterService.filterTickets(for: tickets, with: currentFilters)
+    func updateFilterParams(with newFilter: Filter) {
+        filter = newFilter
+        filteredTickets = filter.filterTickets(for: tickets, with: filter)
+        filteredTickets.forEach { $0.priority.isSelected = true }
         tableView.reloadData()
     }
-    
-  
 }
 
 

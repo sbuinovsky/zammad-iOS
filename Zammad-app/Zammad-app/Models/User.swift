@@ -7,7 +7,7 @@
 
 import Foundation
 
-class User: Hashable, Equatable {
+class User: Equatable, Hashable {
     
     let id: Int
     var firstName: String
