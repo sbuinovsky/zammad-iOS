@@ -12,12 +12,7 @@ class Filter {
     private var owners: [User] = []
     private var groups: [String] = []
     
-    func cleanValues() {
-        priorities = []
-        owners = []
-        groups = []
-    }
-    
+    //MARK: - Public methods
     func getPriorities() -> [Priority] {
         priorities
     }
@@ -34,14 +29,23 @@ class Filter {
         priorities = newValue
     }
     
-    func getOwners(with newValue: [User]) {
+    func setOwners(with newValue: [User]) {
         owners = newValue
     }
     
-    func getGroups(with newValue: [String]) {
+    func setGroups(with newValue: [String]) {
         groups = newValue
     }
     
+    func cleanValues() {
+        priorities = []
+        owners = []
+        groups = []
+    }
+}
+
+//MARK: - Extension
+extension Filter: TicketFilterProtocol {
     func fillFromTickets(with tickets: [Ticket]) -> Filter {
         for ticket in tickets {
             priorities.append(ticket.priority)

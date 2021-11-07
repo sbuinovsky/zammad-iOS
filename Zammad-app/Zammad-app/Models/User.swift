@@ -40,6 +40,7 @@ class User: Equatable, Hashable {
         self.organization = organization
     }
     
+    //MARK: - Public methods
     static func == (lhs: User, rhs: User) -> Bool {
         lhs.id.hashValue == rhs.id.hashValue
     }

@@ -42,7 +42,7 @@ class Priority: Hashable, Equatable {
         self.state = state
     }
     
-    //MARK: - Private methods
+    //MARK: - Public methods
     
     static func == (lhs: Priority, rhs: Priority) -> Bool {
         lhs.state.rawValue.hashValue == rhs.state.rawValue.hashValue

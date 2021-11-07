@@ -5,8 +5,13 @@
 //  Created by Станислав Буйновский on 22.10.2021.
 //
 
-import Foundation
 import UIKit
+
+protocol TicketFilterProtocol {
+    func fillFromTickets(with tickets: [Ticket]) -> Filter
+    func filterTickets(for tickets: [Ticket], with filter: Filter) -> [Ticket]
+}
+
 
 struct Ticket {
     enum Status: String, CaseIterable {
