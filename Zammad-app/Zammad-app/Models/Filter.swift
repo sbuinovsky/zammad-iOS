@@ -8,9 +8,9 @@
 import UIKit
 
 class Filter {
-    var priorities: [Priority] = []
-    var owners: [User] = []
-    var groups: [String] = []
+    private var priorities: [Priority] = []
+    private var owners: [User] = []
+    private var groups: [String] = []
     
     func cleanValues() {
         priorities = []
@@ -18,7 +18,31 @@ class Filter {
         groups = []
     }
     
-    func fillValues(with tickets: [Ticket]) -> Filter {
+    func getPriorities() -> [Priority] {
+        priorities
+    }
+    
+    func getOwners() -> [User] {
+        owners
+    }
+    
+    func getGroups() -> [String] {
+        groups
+    }
+    
+    func setPriorities(with newValue: [Priority]) {
+        priorities = newValue
+    }
+    
+    func getOwners(with newValue: [User]) {
+        owners = newValue
+    }
+    
+    func getGroups(with newValue: [String]) {
+        groups = newValue
+    }
+    
+    func fillFromTickets(with tickets: [Ticket]) -> Filter {
         for ticket in tickets {
             priorities.append(ticket.priority)
             groups.append(ticket.group)

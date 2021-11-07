@@ -9,6 +9,13 @@ import Foundation
 import UIKit
 
 struct Ticket {
+    enum Status: String, CaseIterable {
+        case none = "None"
+        case new = "New"
+        case open = "Open"
+        case closed = "Closed"
+    }
+    
     var id: Int
     var title: String
     var status: Status
@@ -23,15 +30,5 @@ struct Ticket {
     }
     var ownerName: String {
         owner.shortName
-    }
-}
-
-
-extension Ticket {
-    enum Status: String, CaseIterable {
-        case none = "None"
-        case new = "New"
-        case open = "Open"
-        case closed = "Closed"
     }
 }

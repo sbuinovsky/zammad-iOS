@@ -36,7 +36,7 @@ class TicketsController: UIViewController, UITableViewDelegate, UITableViewDataS
         tickets = testTickets
         filteredTickets = tickets
         
-        filter = filter.fillValues(with: tickets)
+        filter = filter.fillFromTickets(with: tickets)
         
     }
     

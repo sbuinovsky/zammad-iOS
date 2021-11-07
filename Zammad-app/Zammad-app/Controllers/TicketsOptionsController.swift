@@ -34,9 +34,6 @@ class TicketsOptionsController: UIViewController {
     
     //MARK: - IBActions
     @IBAction func closeIconPressed(_ sender: UITapGestureRecognizer) {
-        
-        filter = prepareFilterParams(for: filter)
-    
         delegate?.updateFilterParams(with: filter)
         self.dismiss(animated: true, completion: nil)
     }
@@ -64,13 +61,17 @@ extension TicketsOptionsController {
     
     //MARK: - Private methods
     private func setPriorityState(for filter: Filter) {
-        filter.priorities.forEach {
+        let newFilter = filter.getPriorities()
+        newFilter.forEach {
             setPriorityIcon(for: $0)
         }
+        
+        filter.setPriorities(with: newFilter)
     }
     
     private func setGroupsLabelState(for filter: Filter) {
-        let summaryString = filter.groups.reduce("", {
+        let newFilter = filter.getGroups()
+        let summaryString = newFilter.reduce("", {
             $0 == "" ? $1 : $0 + ",  " + $1
         })
         
@@ -93,29 +94,22 @@ extension TicketsOptionsController {
     }
     
     private func switchPriorityIcon(for state: PriorityState) {
-        
+        var newFilter = filter.getPriorities()
         let priority = Priority(state: state)
         
-        if filter.priorities.contains(priority) {
-            for item in filter.priorities {
+        if newFilter.contains(priority) {
+            for item in newFilter {
                 if item.state == state {
                     item.isSelected = item.isSelected ? false : true
                     setPriorityIcon(for: item)
                 }
             }
         } else {
-            filter.priorities.append(priority)
+            newFilter.append(priority)
             setPriorityIcon(for: priority)
         }
-    }
-    
-    private func prepareFilterParams(for filter: Filter) -> Filter {
         
-        filter.priorities = filter.priorities.filter { $0.isSelected == true }
-        filter.priorities.forEach { $0.isSelected = true }
-        
-        return filter
+        newFilter = newFilter.filter { $0.isSelected == true }
+        filter.setPriorities(with: newFilter)
     }
-    
-    
 }
